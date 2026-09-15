@@ -9,9 +9,18 @@ import { Exercicio3 } from './exercicio3/exercicio3';
 import { Exercicio4 } from './exercicio4/exercicio4';
 import { Exercicio5 } from './exercicio5/exercicio5';
 import { Exercicio6 } from './exercicio6/exercicio6';
+import { Exercicio7 } from './exercicio7/exercicio7';
 
 @NgModule({
-  declarations: [Exercicio1, Exercicio2, Exercicio3, Exercicio4, Exercicio5, Exercicio6],
+  declarations: [
+    Exercicio1,
+    Exercicio2,
+    Exercicio3,
+    Exercicio4,
+    Exercicio5,
+    Exercicio6,
+    Exercicio7,
+  ],
   imports: [CommonModule, ListaExercicios1RoutingModule, FormsModule],
 })
 export class ListaExercicios1Module {}
