@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { Exercicio1 } from './exercicio1/exercicio1';
+import { Exercicio2 } from './exercicio2/exercicio2';
 
 const routes: Routes = [
   {path: 'exercicio1', component: Exercicio1},
+  {path: 'exercicio2', component: Exercicio2}
 ];
 
 @NgModule({
