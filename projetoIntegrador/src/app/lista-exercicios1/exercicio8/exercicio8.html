@@ -1,0 +1,10 @@
+<input type="text" [(ngModel)]="produto" placeholder="Digite um produto">
+<p>Produto: {{ produto }}</p>
+
+<input type="number" [(ngModel)]="preco" placeholder="Digite o preço">
+<p>Preço: {{ preco }}</p>
+
+<input type="number" [(ngModel)]="quantidade" placeholder="Digite a quantidade">]
+<p>Quantidade: {{ quantidade }}</p>
+
+<p>Total: R${{ preco * quantidade}}</p>
