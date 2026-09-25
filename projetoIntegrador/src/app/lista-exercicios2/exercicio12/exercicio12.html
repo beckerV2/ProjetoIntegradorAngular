@@ -1,0 +1,38 @@
+<h2>Cadastrar produto</h2>
+
+<label>Nome:</label>
+<input type="text" [(ngModel)]="nomeProduto">
+
+<br>
+<br>
+
+<label>Quantidade:</label>
+<input type="number" [(ngModel)]="quantidadeProduto">
+
+<br>
+<br>
+
+<button (click)="cadastrar()">Cadastrar</button>
+
+@if (mensagem) {
+  <p>{{ mensagem }}</p>
+}
+
+<hr>
+
+<h2>Produtos cadastrados</h2>
+
+<ul>
+  @for (produto of produtos; track produto.id) {
+    <li>
+      {{ produto.nome }} - Quantidade: {{ produto.quantidade }}
+
+      <button (click)="excluir(produto.id)">
+        Excluir
+      </button>
+    </li>
+  } 
+  @empty {
+    <p>Não existem produtos cadastrados.</p>
+  }
+</ul>

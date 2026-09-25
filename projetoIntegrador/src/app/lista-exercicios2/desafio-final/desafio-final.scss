@@ -1,0 +1,24 @@
+li {
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 2px solid black;
+}
+.planejamento {
+  border-left: 8px solid gray;
+}
+.desenvolvimento {
+  border-left: 8px solid blue;
+}
+.testes {
+  border-left: 8px solid orange;
+}
+.concluido {
+  border-left: 8px solid green;
+}
+.nota-alta {
+  font-weight: bold;
+  background-color: lightgreen;
+}
+.nota-baixa {
+  background-color: lightcoral;
+}

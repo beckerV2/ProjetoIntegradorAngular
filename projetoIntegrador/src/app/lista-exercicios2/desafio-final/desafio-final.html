@@ -1,0 +1,61 @@
+<h2>Painel de Projetos Integradores</h2>
+
+<p>Total de projetos: {{ projetos.length }}</p>
+
+<p>
+    Projetos concluídos: {{ projetosConcluidos() }}
+</p>
+
+<button (click)="mostrarConcluidos = true"> Mostrar concluídos </button>
+
+<button (click)="mostrarConcluidos = false"> Ocultar concluídos </button>
+
+<hr>
+
+@if (projetos.length === 0) {
+<p>Não existem projetos cadastrados.</p>
+} 
+@else {
+
+<ul>
+
+    @for (projeto of projetos; track projeto.id; let i = $index) {
+
+    @if (mostrarConcluidos || projeto.status !== 'concluído') {
+    <li [ngClass]="{'planejamento': projeto.status === 'planejamento',
+            'desenvolvimento': projeto.status === 'desenvolvimento',
+            'testes': projeto.status === 'testes',
+            'concluido': projeto.status === 'concluído',
+            'nota-alta': projeto.nota !== null && projeto.nota >= 7,
+            'nota-baixa': projeto.nota !== null && projeto.nota < 6}">
+
+        <h3>{{ i + 1 }} - {{ projeto.titulo }}</h3>
+
+        <p>Equipe: {{ projeto.equipe }}</p>
+
+        @if (projeto.nota !== null) {
+        <p>Nota: {{ projeto.nota }}</p>
+        }
+        @else {
+        <p>Nota ainda não definida</p>
+        }
+
+        <p>Status: {{ projeto.status }}</p>
+
+        @if (projeto.entregue) {
+        <p>Projeto entregue</p>
+        }
+
+        <button (click)="alterarStatus(projeto)"> Alterar status </button>
+
+    </li>
+
+    }
+
+    }
+    @empty {
+    <p>Não existem projetos cadastrados.</p>
+    }
+
+</ul>
+}

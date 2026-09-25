@@ -1,0 +1,12 @@
+<p>Idade: {{ idade }} </p>
+
+<button (click)="diminuirIdade()">-</button>
+<button (click)="aumentarIdade()">+</button>
+
+<div *ngIf="idade < 12"><p>Criança</p></div>
+
+<div *ngIf="idade >= 12 && idade <= 17"><p>Adolescente</p></div>
+
+<div *ngIf="idade >= 18 && idade <= 59"><p>Adulto</p></div>
+
+<div *ngIf="idade >= 60"><p>Idoso</p></div>

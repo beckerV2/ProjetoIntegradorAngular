@@ -10,6 +10,16 @@ const routes: Routes = [
     path: 'exercicios1',
     loadChildren: () => import('./lista-exercicios1/lista-exercicios1-module')
       .then(m => m.ListaExercicios1Module)
+  },
+  {
+    path: 'exercicios2',
+    loadChildren: () => import('./lista-exercicios2/lista-exercicios2-module')
+      .then(m => m.ListaExercicios2Module)
+  },
+  {
+    path: 'modulo-corpo',
+    loadChildren: () => import('./modulo-corpo/modulo-corpo-module')
+      .then(m => m.ModuloCorpoModule)
   }
 ];
 

@@ -1,0 +1,15 @@
+<h2>Produtos</h2>
+
+<button (click)="somenteDisponiveis = false"> Mostrar todos </button>
+
+<button (click)="somenteDisponiveis = true"> Mostrar somente disponíveis </button>
+
+<ul>
+
+  <ng-container *ngFor="let produto of produtos">
+
+    <li *ngIf="!somenteDisponiveis || produto.quantidade > 0"> {{ produto.nome }} - Quantidade: {{ produto.quantidade }} </li>
+
+  </ng-container>
+
+</ul>

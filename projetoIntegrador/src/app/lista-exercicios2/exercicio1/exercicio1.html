@@ -1,0 +1,10 @@
+<h2>Login</h2>
+
+@if (usuarioLogado) {
+    <p>Usuário está logado.</p>
+} 
+@else {
+    <p>Usuário não está logado.</p>
+}
+
+<button (click)="alternarLogin()"> {{ usuarioLogado ? 'Sair' : 'Entrar' }} </button>

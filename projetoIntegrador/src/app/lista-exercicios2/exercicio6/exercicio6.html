@@ -1,0 +1,17 @@
+<h2>Lista de nomes</h2>
+
+<p>Total de nomes: {{ nomes.length }}</p>
+
+<button (click)="removerUltimo()" [disabled]="nomes.length === 0"> Remover último </button>
+
+<button (click)="limparLista()" [disabled]="nomes.length === 0"> Limpar lista </button>
+
+<button (click)="restaurarLista()"> Restaurar lista </button>
+
+<div *ngIf="nomes.length === 0"> <p>Nenhum nome cadastrado</p> </div>
+
+<ul *ngIf="nomes.length > 0">
+  <li *ngFor="let nome of nomes">
+    {{ nome }}
+  </li>
+</ul>
